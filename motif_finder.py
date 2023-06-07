@@ -13,7 +13,7 @@ def generate_permutations(n):
     edges = list(itertools.permutations(range(1, num_nodes + 1), 2))
 
     # Generate power set of edges
-    power_set = itertools.chain.from_iterable(itertools.combinations(edges, r) for r in range(len(edges) + 1))
+    power_set = itertools.chain.from_iterable(itertools.combinations(edges, r) for r in range(n -1 ,len(edges) + 1))
 
     # Iterate over each set of edges and create graphs
     for edge_set in power_set:
