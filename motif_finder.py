@@ -3,6 +3,9 @@ import networkx as nx
 
 
 def generate_permutations(n):
+    # N int indicating number of nodes for connected subgraphs 
+    # Returns all connected subgraphs of size n
+    
     # Define the number of nodes
     num_nodes = n
     graphs = []
@@ -33,6 +36,11 @@ def generate_permutations(n):
 
 
 def n_connected_subgraphs(output_file, s=1, e=1):
+    # OUTPUT_FILE string representing name of file to write output
+    # S int for smallest size of motif graphs, default 1
+    # E int with biggest size of motif graphs to return
+    # Writes into OUTPUT_FILE all connected subgraphs from n = s to n = e
+    
     # open output file
     file = open(output_file, "w")
 
@@ -82,6 +90,10 @@ def generate_groups(tuples, k):
 
 
 def n_connected_subgraphs_count(in_graph, output_file, n=1):
+    # IN_GRAPH list of tuples representing input graph. Each tuple represent and edge with origin in first int and end in second int. 
+    # OUTPUT_FILE string representing file to write into 
+    # N int representing size of motifs to find in IN_GRAPH. Default 1
+    
     # open output file
     file = open(output_file, "w")
     # use generate_groups function to find all subgraphs in in_graph of size n
