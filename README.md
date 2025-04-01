@@ -1,5 +1,5 @@
 # motif_finder
-Network motif finder in graph represented network
+Motif finder in graph represented network
 
 With this code you will be able to:
 
